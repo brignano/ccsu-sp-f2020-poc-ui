@@ -16,6 +16,7 @@ export class AddComponent implements OnInit {
   constructor(private claimsService: ClaimsService) { }
 
   ngOnInit(): void {
+    this.claim.category = this.claim.category || '';
   }
 
   addClaim(): void {

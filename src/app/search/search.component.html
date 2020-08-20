@@ -7,7 +7,7 @@
         <div class="col-md-6">
           <div class="input-group">
             <span class="input-group-addon"><i class="icon icon-policy"></i></span>
-            <input id="policyNumber" data-minlength="5" class="form-control" aria-required="false" #policyNumber/>
+            <input id="policyNumber" data-minlength="5" class="form-control" aria-required="false" placeholder="123456" #policyNumber/>
           </div>
           <small class="help-block">Minimum 5 characters</small>
           <span class="icon icon-attention form-control-feedback" aria-hidden="true"><i
@@ -23,7 +23,11 @@
             <select id="ClaimsCategorySelect" name="ClaimsCategorySelect" class="form-control" #category>
               <option value="">Please Select</option>
               <option value="Bodily Injury">Bodily Injury</option>
+              <option value="Medical Payments">Medical Payments</option>
               <option value="Property Damage">Property Damage</option>
+              <option value="Collision">Collision</option>
+              <option value="Comprehensive">Comprehensive</option>
+              <option value="Uninsured and Underinsured Motorist Coverage">Uninsured and Underinsured Motorist Coverage</option>
             </select>
             <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span>
             <div class="help-block with-errors"></div>

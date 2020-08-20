@@ -1,13 +1,13 @@
 <div class="container">
   <h1>Add Claim</h1>
   <div class="row">
-    <form data-toggle="validator" (submit)="addClaim()" method="post" #myForm="ngForm">
+    <form class="form-selectors" data-toggle="validator" (submit)="addClaim()" #myForm="ngForm">
       <div class="form-group has-feedback">
         <label for="policy_number" class="control-label col-md-6">Policy Number</label>
         <div class="col-md-6">
           <div class="input-group">
             <span class="input-group-addon"><i class="icon icon-policy"></i></span>
-            <input id="policy_number" type="text" class="form-control" name="policy_number"
+            <input id="policy_number" type="text" class="form-control" name="policy_number" placeholder="123456"
                    data-error="Please enter a valid policy number." data-minlength="5" aria-required="true" required
                    [(ngModel)]="claim.policy_number"/>
           </div>
@@ -23,7 +23,8 @@
           <div class="input-group">
             <span class="input-group-addon"><i class="icon icon-front-collision"></i></span>
             <input id="location" type="text" class="form-control" name="location" data-error="Please enter a location."
-                   aria-required="true" required [(ngModel)]="claim.location" (blur)="getLatLng()"/>
+                   placeholder="10 Main St Hartford, CT 06106" aria-required="true" required
+                   [(ngModel)]="claim.location" (blur)="getLatLng()"/>
           </div>
           <small class="help-block" *ngIf="latlng">Latitude: {{latlng.latitude}}, Longitude: {{latlng.longitude}}</small>
           <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span>
@@ -39,7 +40,11 @@
                     data-error="Please select a category." [(ngModel)]="claim.category">
               <option value="">Please Select</option>
               <option value="Bodily Injury">Bodily Injury</option>
+              <option value="Medical Payments">Medical Payments</option>
               <option value="Property Damage">Property Damage</option>
+              <option value="Collision">Collision</option>
+              <option value="Comprehensive">Comprehensive</option>
+              <option value="Uninsured and Underinsured Motorist Coverage">Uninsured and Underinsured Motorist Coverage</option>
             </select>
             <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span>
             <div class="help-block with-errors"></div>
@@ -51,7 +56,8 @@
         <label for="description" class="control-label col-md-6">Description</label>
         <div class="col-md-6">
         <textarea class="form-control" maxlength="250" rows="5" id="description" name="description" aria-required="true"
-                  required data-error="Please enter a description." [(ngModel)]="claim.description"></textarea><small
+                  placeholder="Enter a description of the claim." required data-error="Please enter a description."
+                  [(ngModel)]="claim.description"></textarea><small
           class="textarea-character-limit"></small>
           <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span>
           <div class="help-block with-errors"></div>

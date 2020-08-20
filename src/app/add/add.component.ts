@@ -21,7 +21,7 @@ export class AddComponent implements OnInit {
 
   addClaim(): void {
     this.claimsService.addClaim(this.claim).subscribe(
-      () => this.formValues.reset(),
+      () => {},
       (err) => console.log(err)
     );
   }

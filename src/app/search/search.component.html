@@ -1,5 +1,8 @@
 <div class="container">
-  <h1>Search Claims</h1>
+  <div class="row text-center" style="padding: 3em;">
+    <h1>Search Claims</h1>
+    <small>Get claim information from the database.</small>
+  </div>
   <div class="row">
     <form data-toggle="validator" (submit)="getClaims(this.policyNumber?.value, this.category?.value)">
       <div class="form-group has-feedback">

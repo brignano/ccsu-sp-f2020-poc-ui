@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-ccsuspf2020pocui-dev-145041-authRole",
+            "UnauthRoleArn": "arn:aws:iam::549188633263:role/amplify-ccsuspf2020pocui-dev-145041-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::549188633263:role/amplify-ccsuspf2020pocui-dev-145041-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-ccsuspf2020pocui-dev-145041-deployment",
+            "UnauthRoleName": "amplify-ccsuspf2020pocui-dev-145041-unauthRole",
+            "StackName": "amplify-ccsuspf2020pocui-dev-145041",
+            "StackId": "arn:aws:cloudformation:us-east-1:549188633263:stack/amplify-ccsuspf2020pocui-dev-145041/0d4039c0-e316-11ea-8c0e-0ac7f938abd6",
+            "AmplifyAppId": "d1j2t6fl2bfx75"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1j2t6fl2bfx75",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}

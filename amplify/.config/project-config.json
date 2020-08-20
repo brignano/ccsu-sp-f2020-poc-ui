@@ -1,0 +1,17 @@
+{
+    "projectName": "ccsuspf2020pocui",
+    "version": "3.0",
+    "frontend": "javascript",
+    "javascript": {
+        "framework": "angular",
+        "config": {
+            "SourceDir": "src",
+            "DistributionDir": "dist/ccsu-sp-f2020-poc-ui",
+            "BuildCommand": "npm run-script build",
+            "StartCommand": "ng serve"
+        }
+    },
+    "providers": [
+        "awscloudformation"
+    ]
+}

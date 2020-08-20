@@ -1,6 +1,11 @@
 {
-  "/api/*": {
-    "target": "http://localhost:5000/",
+  "/geocode/*": {
+    "target": "http://api-dev.eba-tirx8wh2.us-east-1.elasticbeanstalk.com/",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/claims/*": {
+    "target": "http://api-dev.eba-tirx8wh2.us-east-1.elasticbeanstalk.com/",
     "secure": false,
     "logLevel": "debug"
   }

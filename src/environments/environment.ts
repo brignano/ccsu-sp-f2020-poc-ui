@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  api: 'http://localhost:4200/api/'
+  claims_api: 'http://localhost:4200/claims/',
+  geocode_api: 'http://localhost:4200/geocode/'
 };
 
 /*

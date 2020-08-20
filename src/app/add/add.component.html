@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Add Claim</h1>
   <div class="row">
-    <form data-toggle="validator" (submit)="addClaim()">
+    <form data-toggle="validator" (submit)="addClaim()" method="post" #myForm="ngForm">
       <div class="form-group has-feedback">
         <label for="policy_number" class="control-label col-md-6">Policy Number</label>
         <div class="col-md-6">
@@ -21,7 +21,7 @@
         <label for="location" class="control-label col-md-6">Location</label>
         <div class="col-md-6">
           <div class="input-group">
-            <span class="input-group-addon"><i class="icon icon-policy"></i></span>
+            <span class="input-group-addon"><i class="icon icon-front-collision"></i></span>
             <input id="location" type="text" class="form-control" name="location" data-error="Please enter a location."
                    aria-required="true" required [(ngModel)]="claim.location"/>
           </div>

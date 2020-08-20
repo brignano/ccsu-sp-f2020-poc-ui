@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Claim } from '../claim-card/claim.model';
 import { ClaimsService } from '../claims/claims.service';
 
@@ -8,7 +8,8 @@ import { ClaimsService } from '../claims/claims.service';
   styleUrls: ['./add.component.scss']
 })
 export class AddComponent implements OnInit {
-  claim = new Claim();
+  claim = {} as Claim;
+  @ViewChild('myForm') formValues; // Added this
 
   constructor(private claimsService: ClaimsService) { }
 
@@ -17,7 +18,7 @@ export class AddComponent implements OnInit {
 
   addClaim(): void {
     this.claimsService.addClaim(this.claim).subscribe(
-      (res) => console.log(res),
+      () => this.formValues.reset(),
       (err) => console.log(err)
     );
   }

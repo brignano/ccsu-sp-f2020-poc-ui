@@ -1,8 +1,7 @@
-export class Claim {
-  constructor(
-    public id?: number,
-    public policy_number?: string,
-    public location?: string,
-    public category?: string,
-    public description?: string) {}
+export interface Claim {
+  id?: number;
+  policy_number?: string;
+  location?: string;
+  category?: string;
+  description?: string;
 }

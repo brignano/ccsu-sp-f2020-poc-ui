@@ -11,13 +11,13 @@ export class ClaimsService {
   getClaims(policyNumber?: string, category?: string): Observable<object> {
     const {api} = environment;
     const params = this.getParams(policyNumber, category);
-    return this.http.get(api + params, {});
+    return this.http.get(api + 'claims' + params, {});
   }
 
   addClaim(claim: Claim): Observable<Claim> {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     const {api} = environment;
-    return this.http.post(api + 'claims', JSON.stringify(claim), {headers});
+    return this.http.post(api + 'claims/', JSON.stringify(claim), {headers});
   }
 
   getGeocode(location: string): Observable<object> {
@@ -27,11 +27,12 @@ export class ClaimsService {
   }
 
   getParams(policyNumber?: string, category?: string): string {
-    let returnString = 'claims';
 
-    if ((category === null && category === '') && (policyNumber === null || policyNumber === '')) {
-      return returnString + '/all';
+    if ((category === null || category === '') && (policyNumber === null || policyNumber === '')) {
+      return '/all';
     }
+
+    let returnString = '';
 
     if (policyNumber !== null && policyNumber !== '') {
       returnString += '?policy_number=' + policyNumber;
@@ -39,6 +40,7 @@ export class ClaimsService {
     if (category !== null && category !== '') {
       returnString += '?category=' + category;
     }
+
     return returnString;
   }
 }

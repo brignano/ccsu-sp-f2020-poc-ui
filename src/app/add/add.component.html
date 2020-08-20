@@ -23,8 +23,9 @@
           <div class="input-group">
             <span class="input-group-addon"><i class="icon icon-front-collision"></i></span>
             <input id="location" type="text" class="form-control" name="location" data-error="Please enter a location."
-                   aria-required="true" required [(ngModel)]="claim.location"/>
+                   aria-required="true" required [(ngModel)]="claim.location" (blur)="getLatLng()"/>
           </div>
+          <small class="help-block" *ngIf="latlng">Latitude: {{latlng.latitude}}, Longitude: {{latlng.longitude}}</small>
           <span class="icon icon-attention form-control-feedback" aria-hidden="true"></span>
           <div class="help-block with-errors"></div>
         </div>

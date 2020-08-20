@@ -20,7 +20,7 @@ export class ClaimsService {
     return this.http.post(api + 'claims/', JSON.stringify(claim), {headers});
   }
 
-  getGeocode(location: string): Observable<object> {
+  getLatLng(location: string): Observable<object> {
     const {api} = environment;
     const params = 'geocode/?location=' + location;
     return this.http.get(api + params);

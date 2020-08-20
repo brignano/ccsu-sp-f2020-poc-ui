@@ -18,7 +18,10 @@ export class SearchComponent implements OnInit {
 
   getClaims(policyNumber?: string, category?: string): void {
    this.claimsService.getClaims(policyNumber, category)
-      .subscribe((data: any) => this.claims = data);
+      .subscribe(
+        (data: any) => this.claims = data,
+        () => this.claims = []
+      );
   }
 
 }

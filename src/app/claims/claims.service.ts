@@ -17,7 +17,7 @@ export class ClaimsService {
   addClaim(claim: Claim): Observable<Claim> {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     const {api} = environment;
-    return this.http.post(api + 'claims/', JSON.stringify(claim), {headers});
+    return this.http.post(api + 'claims', JSON.stringify(claim), {headers});
   }
 
   getGeocode(location: string): Observable<object> {

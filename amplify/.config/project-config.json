@@ -7,7 +7,7 @@
         "config": {
             "SourceDir": "src",
             "DistributionDir": "dist/ccsu-sp-f2020-poc-ui",
-            "BuildCommand": "npm run-script build",
+            "BuildCommand": "npm run-script build:prod",
             "StartCommand": "ng serve"
         }
     },

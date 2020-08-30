@@ -15,7 +15,7 @@ export class ClaimsService {
   }
 
   addClaim(claim: Claim): Observable<Claim> {
-    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    const headers = new HttpHeaders().set('Content-Type', 'application/json').set('Content-Security-Policy', 'upgrade-insecure-requests');
     const {claims_api} = environment;
     return this.http.post(claims_api, JSON.stringify(claim), {headers});
   }
